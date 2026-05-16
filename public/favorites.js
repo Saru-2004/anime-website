@@ -1,27 +1,35 @@
 const favContainer =
   document.getElementById("favContainer");
 
-let favorites =
-  JSON.parse(localStorage.getItem("favorites")) || [];
 
-function showFavorites(){
+async function loadFavorites(){
+
+  const response =
+    await fetch("/favorites");
+
+  const favorites =
+    await response.json();
 
   favContainer.innerHTML = "";
 
   if(favorites.length === 0){
+
     favContainer.innerHTML =
-      "<h3>No favorites yet</h3>";
+      "<h2>No favorites yet</h2>";
+
     return;
   }
 
   favorites.forEach(anime => {
 
-    const div = document.createElement("div");
+    const div =
+      document.createElement("div");
 
     div.classList.add("card");
 
     div.innerHTML = `
-      <img src="${anime.images.jpg.image_url}">
+      <img src="${anime.image}">
+
       <div class="card-content">
         <h2>${anime.title}</h2>
       </div>
@@ -33,4 +41,4 @@ function showFavorites(){
 
 }
 
-showFavorites();
+loadFavorites();
