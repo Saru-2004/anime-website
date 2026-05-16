@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Picks</title>
+
+  <link rel="stylesheet" href="style.css">
+  <a href="favorites.html">
+  ❤️ Favorites
+</a>
+
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+
+    <div class="hero-overlay">
+
+      <h1>AnimeVerse</h1>
+
+      <p>
+        Discover amazing anime series and movies
+      </p>
+
+      <button id="recommendBtn">
+        🎲 Can't Decide?
+      </button>
+
+    </div>
+
+  </section>
+  <button id="themeToggle">🌙 Dark Mode</button>
+
+
+  <!-- SEARCH -->
+  <header>
+
+    <div class="search-box">
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search anime..."
+      >
+
+      <button id="searchBtn">
+        Search
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- FILTERS -->
+  <div class="recommend-box">
+
+    <select id="genreSelect">
+
+      <option value="">Any Genre</option>
+      <option value="1">Action</option>
+      <option value="2">Adventure</option>
+      <option value="4">Comedy</option>
+      <option value="8">Drama</option>
+      <option value="22">Romance</option>
+      <option value="24">Sci-Fi</option>
+
+    </select>
+
+
+    <select id="typeSelect">
+
+      <option value="">Any Type</option>
+      <option value="tv">Series</option>
+      <option value="movie">Movie</option>
+
+    </select>
+
+  </div>
+
+
+  <!-- TRENDING -->
+  <section>
+
+    <h2 class="section-title">
+      🔥 Trending Anime
+    </h2>
+
+    <main id="animeContainer"></main>
+
+  </section>
+<div id="trailerModal" class="modal">
+
+  <div class="modal-content">
+
+    <span id="closeModal">
+      ✖
+    </span>
+
+    <iframe
+      id="trailerFrame"
+      width="100%"
+      height="500"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
